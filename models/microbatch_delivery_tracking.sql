@@ -8,3 +8,7 @@
     on_schema_change='fail'
 )}}
 SELECT * FROM {{ ref('externally_updated_model')}}
+
+{% if model.batch.id == '20241213' %}
+    GRINCH INPUTS BAD SQL;
+{% endif %}
